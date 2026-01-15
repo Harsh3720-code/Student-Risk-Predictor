@@ -1,32 +1,34 @@
 # 🎓 Student Risk Prediction using Machine Learning
 
-This project builds an early-warning system to predict whether a student is at risk of failing based on academic, social features, etc.
+This project builds a complete **end-to-end machine learning system** to predict whether a student is **at risk of failing** based on demographic, social, and academic features.
 
-The goal is not only to achieve good accuracy, but to **prioritise recall for at-risk students**, since missing a struggling student is more costly than a false alarm.
+The focus is not only on accuracy, but on building a **decision-oriented, explainable, and reproducible ML pipeline** suitable for a real-world early-warning system in education.
 
 ---
 
 ## 📌 Problem Statement
 
-Educational institutions often want to identify students who are at risk of failing as early as possible in order to provide timely support.
+Educational institutions often want to identify students who are at risk of failing **as early as possible** so that timely academic support can be provided.
 
-This project formulates the problem as a **binary classification task**:
+This project formulates the task as a **binary classification problem**:
 
-- 0 → Not at risk
-- 1 → At risk of failing
+- **0** → Not at risk  
+- **1** → At risk of failing  
 
-The system predicts risk using student background, family, and academic behaviour data.
+The goal is to **maximize the detection of at-risk students**, even if this means accepting some false alarms.
 
 ---
 
 ## 📊 Dataset
 
-- Source: UCI Student Performance Dataset
-- 395 students
-- 30 original features (demographic, social, academic)
+- Source: UCI Student Performance Dataset  
+- Number of students: 395  
+- Original features: Demographic, social, family, and academic attributes  
 - Target variable created as:
 
 ```python
+at_risk = (G3 < 10)
+
 at_risk = (G3 < 10)
 
 where G3 is the final grade and to avoid data leakages G1,G2,G3 were removed from the input features.
